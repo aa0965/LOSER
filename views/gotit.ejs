@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+     .flex-container{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        height: 400px;
+
+     }
+     .card {
+ width:250px;
+ height: 400px;
+ margin: 15px;
+}
+.card-action{
+  height: 40px;
+}
+.card-content{
+  height:130px;
+}
+
+    </style>
+  </head>
+  <body>
+
+
+  <div class="flex-container">
+      <% for(var i=0; i<result.length; i++) {%>
+
+      <div class="card ">
+        <div class="card-image">
+          <img src="https://media.gettyimages.com/photos/blood-dripping-on-white-background-picture-id136755974">
+          <span class="card-title"><%= result[0].Name %></span>
+        </div>
+        <div class="card-content">
+          <h6>Name : <%= result[i].Name %></h6>
+          <h6>Age : <%= result[i].Age %></h6>
+          <h6>BloodType : <%= result[i].BloodType %></h6>
+        </div>
+        <div class="card-action">
+          <a href="/">Go back to search</a>
+        </div>
+
+        </div>
+      <% } %>
+  </div>
+
+
+  </body>
+</html>
