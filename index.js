@@ -27,7 +27,11 @@ app.use(bodyParser.urlencoded({
       else console.log('connected');
             });
         app.get('/', function (req, res) {
-                      res.render('home.html');
+                      res.render('main.ejs');
+
+});
+app.get('/home', function (req, res) {
+              res.render('home.html');
 
 });
 
@@ -45,7 +49,10 @@ app.post('/myaction', function(req, res) {
 
 });
 
+app.post('/', (req, res) => {
 
+  res.redirect('/home');
+})
 
 
 
