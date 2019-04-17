@@ -37,7 +37,7 @@ app.get('/home', function (req, res) {
 
 
 
-app.post('/myaction', function(req, res) {
+app.post('/home', function(req, res) {
   console.log(req.body.input[0]);
  let bloodtype = req.body.input[0];
 
